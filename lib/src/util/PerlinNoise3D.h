@@ -17,6 +17,16 @@ class PerlinNoise3D {
   PerlinNoise3D();
   PerlinNoise3D(unsigned int seed);
 
+  /**
+   * noise
+   *
+   * Compute Perlin noise at coordinates x, y, z
+   *
+   * @param x coordinate
+   * @param y coordinate
+   * @param z coordinate
+   * @return perlin noise at the given coordinates
+   */
   double noise(double x, double y, double z);
 
  protected:

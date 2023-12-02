@@ -20,7 +20,7 @@ std::vector<std::string> ModelLoader::split(std::string s, const std::string &de
   return result;
 }
 
-std::vector<float> ModelLoader::loadMesh(const std::string &fileName) {
+std::vector<float> ModelLoader::loadOBJ(const std::string &fileName) {
   std::vector<unsigned int> vertexIndices, uvIndices, normalIndices;
   std::vector<glm::vec3> tmp_vertices;
   std::vector<glm::vec2> tmp_uvs;

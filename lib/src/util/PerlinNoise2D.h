@@ -8,6 +8,15 @@
 // Using Implementation from https://en.wikipedia.org/wiki/Perlin_noise
 class PerlinNoise2D {
  public:
+  /**
+   * perlin
+   *
+   * Compute Perlin noise at coordinates x, y
+   *
+   * @param x coordinate
+   * @param y coordinate
+   * @return Perlin noise at the given coordinates
+   */
   static float perlin(float x, float y);
  private:
   typedef struct {

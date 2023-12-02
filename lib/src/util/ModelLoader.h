@@ -14,7 +14,16 @@
 
 class ModelLoader {
  public:
-  static std::vector<float> loadMesh(const std::string &fileName);
+  /**
+   * loadOBJ
+   *
+   * loads an .obj model file into OpenGL compatible form
+   *
+   * @param fileName the path to an .obj file with UVs and normals
+   * @return a vector of OpenGL compatible float vertices with uv texture coordinates and normals,
+   *         or an empty vector if the file could not be read
+   */
+  static std::vector<float> loadOBJ(const std::string &fileName);
  private:
   static std::vector<std::string> split(std::string s, const std::string &delimiter);
 };
