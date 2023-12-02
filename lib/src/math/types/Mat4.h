@@ -2,8 +2,8 @@
 // Created by Jonas on 7/1/23.
 //
 
-#ifndef MCCLONE_Mat4_H
-#define MCCLONE_Mat4_H
+#ifndef INC_3D_ENGINE_Mat4_H
+#define INC_3D_ENGINE_Mat4_H
 
 #include <cstdint>
 #include <iostream>
@@ -265,4 +265,4 @@ Mat4<T> operator-(Mat4<T> m1, T s) {
 typedef Mat4<int> Mat4i;
 typedef Mat4<float> Mat4f;
 
-#endif //MCCLONE_Mat4_H
+#endif //INC_3D_ENGINE_Mat4_H

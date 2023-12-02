@@ -2,8 +2,8 @@
 // Created by Jonas on 7/1/23.
 //
 
-#ifndef MCCLONE_MAT_H
-#define MCCLONE_MAT_H
+#ifndef INC_3D_ENGINE_MAT_H
+#define INC_3D_ENGINE_MAT_H
 
 #include <cstdint>
 #include <iostream>
@@ -142,4 +142,4 @@ Mat<C, R, T> operator-(Mat<C, R, T> m1, T s) {
   return result;
 }
 
-#endif //MCCLONE_MAT_H
+#endif //INC_3D_ENGINE_MAT_H

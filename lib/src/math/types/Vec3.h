@@ -2,8 +2,8 @@
 // Created by Jonas on 7/1/23.
 //
 
-#ifndef MCCLONE_VEC3_H
-#define MCCLONE_VEC3_H
+#ifndef INC_3D_ENGINE_VEC3_H
+#define INC_3D_ENGINE_VEC3_H
 
 template<class T>
 class Vec3 {
@@ -67,4 +67,4 @@ Vec3<T> operator/(Vec3<T> a, T b) {
 typedef Vec3<int> Vec3i;
 typedef Vec3<float> Vec3f;
 
-#endif //MCCLONE_VEC3_H
+#endif //INC_3D_ENGINE_VEC3_H

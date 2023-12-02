@@ -2,8 +2,8 @@
 // Created by Jonas on 7/1/23.
 //
 
-#ifndef MCCLONE_VEC4_H
-#define MCCLONE_VEC4_H
+#ifndef INC_3D_ENGINE_VEC4_H
+#define INC_3D_ENGINE_VEC4_H
 
 template<class T>
 class Vec4 {
@@ -59,4 +59,4 @@ Vec4<T> operator/(Vec4<T> a, T b) {
 typedef Vec4<int> Vec4i;
 typedef Vec4<float> Vec4f;
 
-#endif //MCCLONE_VEC4_H
+#endif //INC_3D_ENGINE_VEC4_H
