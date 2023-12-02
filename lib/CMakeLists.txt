@@ -28,6 +28,7 @@ set(SOURCE_FILES
         src/physics/collision/colliders/SphereCollider.cpp src/physics/collision/colliders/SphereCollider.h
         src/physics/collision/CollisionChecker.cpp src/physics/collision/CollisionChecker.h
         src/rendering/Window.cpp src/rendering/Window.h
+        src/rendering/Texture.cpp src/rendering/Texture.h
 )
 
 add_library(lib ${SOURCE_FILES})
