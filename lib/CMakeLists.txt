@@ -22,7 +22,12 @@ set(SOURCE_FILES
         src/util/ModelLoader.cpp src/util/ModelLoader.h
         src/util/PerlinNoise2D.cpp src/util/PerlinNoise2D.h
         src/util/PerlinNoise3D.cpp src/util/PerlinNoise3D.h
-        src/util/Time.cpp src/util/Time.h)
+        src/util/Time.cpp src/util/Time.h
+        src/physics/collision/colliders/BoxCollider.cpp src/physics/collision/colliders/BoxCollider.h
+        src/physics/collision/colliders/PointCollider.cpp src/physics/collision/colliders/PointCollider.h
+        src/physics/collision/colliders/SphereCollider.cpp src/physics/collision/colliders/SphereCollider.h
+        src/physics/collision/CollisionChecker.cpp src/physics/collision/CollisionChecker.h
+)
 
 add_library(lib ${SOURCE_FILES})
 
