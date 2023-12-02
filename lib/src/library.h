@@ -1,0 +1,6 @@
+#ifndef INC_3D_ENGINE_LIBRARY_H
+#define INC_3D_ENGINE_LIBRARY_H
+
+void hello();
+
+#endif //INC_3D_ENGINE_LIBRARY_H
