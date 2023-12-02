@@ -2,8 +2,8 @@
 // Created by Jonas on 10/2/19.
 //
 
-#ifndef MCCLONE_WINDOW_H
-#define MCCLONE_WINDOW_H
+#ifndef INC_3D_ENGINE_WINDOW_H
+#define INC_3D_ENGINE_WINDOW_H
 
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
@@ -32,4 +32,4 @@ class Window {
  private:
 };
 
-#endif //MCCLONE_WINDOW_H
+#endif //INC_3D_ENGINE_WINDOW_H

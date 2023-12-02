@@ -2,8 +2,8 @@
 // Created by Jonas on 7/21/18.
 //
 
-#ifndef MCCLONE_TEXTURE_H
-#define MCCLONE_TEXTURE_H
+#ifndef INC_3D_ENGINE_TEXTURE_H
+#define INC_3D_ENGINE_TEXTURE_H
 
 #include <iostream>
 #include <cstring>
@@ -26,4 +26,4 @@ class Texture {
 
 };
 
-#endif //MCCLONE_TEXTURE_H
+#endif //INC_3D_ENGINE_TEXTURE_H

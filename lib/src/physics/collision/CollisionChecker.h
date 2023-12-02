@@ -2,8 +2,8 @@
 // Created by Jonas on 11/25/23.
 //
 
-#ifndef MCCLONE_COLLISIONCHECKER_H
-#define MCCLONE_COLLISIONCHECKER_H
+#ifndef INC_3D_ENGINE_COLLISIONCHECKER_H
+#define INC_3D_ENGINE_COLLISIONCHECKER_H
 
 
 #include "colliders/BoxCollider.h"
@@ -22,4 +22,4 @@ public:
 };
 
 
-#endif //MCCLONE_COLLISIONCHECKER_H
+#endif //INC_3D_ENGINE_COLLISIONCHECKER_H

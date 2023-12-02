@@ -2,8 +2,8 @@
 // Created by Jonas on 11/25/23.
 //
 
-#ifndef MCCLONE_BOXCOLLIDER_H
-#define MCCLONE_BOXCOLLIDER_H
+#ifndef INC_3D_ENGINE_BOXCOLLIDER_H
+#define INC_3D_ENGINE_BOXCOLLIDER_H
 
 #include <glm/vec3.hpp>
 
@@ -17,4 +17,4 @@ class BoxCollider {
   BoxCollider(glm::vec3 min, glm::vec3 max);
 };
 
-#endif //MCCLONE_BOXCOLLIDER_H
+#endif //INC_3D_ENGINE_BOXCOLLIDER_H
