@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <glad/glad.h>
-#include "Material.h"
+#include "surface/Material.h"
 
 class Mesh {
  public:

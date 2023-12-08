@@ -28,9 +28,12 @@ set(SOURCE_FILES
         src/physics/collision/colliders/SphereCollider.cpp src/physics/collision/colliders/SphereCollider.h
         src/physics/collision/CollisionChecker.cpp src/physics/collision/CollisionChecker.h
         src/rendering/Window.cpp src/rendering/Window.h
-        src/rendering/Texture.cpp src/rendering/Texture.h
-        src/rendering/Material.cpp src/rendering/Material.h
+        src/rendering/surface/Texture.cpp src/rendering/surface/Texture.h
+        src/rendering/surface/Material.cpp src/rendering/surface/Material.h
         src/rendering/Mesh.cpp src/rendering/Mesh.h
+        src/rendering/scene/SceneNode.cpp src/rendering/scene/SceneNode.h
+        src/rendering/scene/Scene.cpp src/rendering/scene/Scene.h
+        src/rendering/scene/Entity.cpp src/rendering/scene/Entity.h
 )
 
 add_library(lib ${SOURCE_FILES})

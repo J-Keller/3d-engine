@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <cstring>
-#include "../include/stb_image.h"
+#include "../../include/stb_image.h"
 
 class Texture {
 
