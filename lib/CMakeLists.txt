@@ -13,7 +13,6 @@ link_directories(usr/lib/x86_64-linux-gnu)
 set(SOURCE_FILES
         src/include/glad.c
         src/include/stb_image.cpp src/include/stb_image.h
-        src/library.cpp src/library.h
         src/math/types/Mat.h
         src/math/types/Mat4.h
         src/math/types/Vec2.h

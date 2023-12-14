@@ -6,12 +6,19 @@
 #include <thread>
 #include <iostream>
 #include "MainLoop.h"
-#include "../rendering/Window.h"
 #include "../util/Time.h"
 
-MainLoop::MainLoop(int width, int height, const std::string &title) {
+MainLoop::MainLoop(Game *game, int width, int height, const std::string &title) {
+  this->game = game;
   Window::createWindow(width, height, title);
   isRunning = false;
+}
+
+void MainLoop::registerInputCallbacks(GLFWkeyfun keyCallback,
+                                      GLFWmousebuttonfun mouseCallback,
+                                      GLFWcursorposfun cursorPositionCallback,
+                                      GLFWscrollfun scrollCallback) {
+  Window::registerInputCallbacks(keyCallback, mouseCallback, cursorPositionCallback, scrollCallback);
 }
 
 void MainLoop::start() {

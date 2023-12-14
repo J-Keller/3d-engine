@@ -7,13 +7,18 @@
 
 #include <string>
 #include "Game.h"
+#include "../rendering/Window.h"
 
 class MainLoop {
  public:
 
   constexpr static const double FRAME_CAP = 5000.0;
 
-  MainLoop(int width, int height, const std::string &title);
+  MainLoop(Game *game, int width, int height, const std::string &title);
+  void registerInputCallbacks(GLFWkeyfun keyCallback,
+                                     GLFWmousebuttonfun mouseCallback,
+                                     GLFWcursorposfun cursorPositionCallback,
+                                     GLFWscrollfun scrollCallback);
 
   void start();
   void stop();
