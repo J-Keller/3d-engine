@@ -3,6 +3,7 @@
 //
 
 #include <stack>
+#include <fstream>
 #include "Scene.h"
 
 void Scene::render() {

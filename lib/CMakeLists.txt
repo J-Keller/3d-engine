@@ -34,6 +34,12 @@ set(SOURCE_FILES
         src/rendering/scene/SceneNode.cpp src/rendering/scene/SceneNode.h
         src/rendering/scene/Scene.cpp src/rendering/scene/Scene.h
         src/rendering/scene/Entity.cpp src/rendering/scene/Entity.h
+        src/rendering/shader/PhongShader.cpp src/rendering/shader/PhongShader.h
+        src/rendering/shader/Shader.cpp src/rendering/shader/Shader.h
+        src/rendering/lighting/BaseLight.cpp src/rendering/lighting/BaseLight.h
+        src/rendering/lighting/DirectionalLight.cpp src/rendering/lighting/DirectionalLight.h
+        src/rendering/lighting/PointLight.cpp src/rendering/lighting/PointLight.h
+        src/rendering/lighting/SpotLight.cpp src/rendering/lighting/SpotLight.h
 )
 
 add_library(lib ${SOURCE_FILES})
