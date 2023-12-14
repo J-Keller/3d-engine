@@ -40,6 +40,10 @@ set(SOURCE_FILES
         src/rendering/lighting/DirectionalLight.cpp src/rendering/lighting/DirectionalLight.h
         src/rendering/lighting/PointLight.cpp src/rendering/lighting/PointLight.h
         src/rendering/lighting/SpotLight.cpp src/rendering/lighting/SpotLight.h
+        src/rendering/actors/Actor.cpp src/rendering/actors/Actor.h
+        src/rendering/actors/Camera.cpp src/rendering/actors/Camera.h
+        src/rendering/actors/Light.cpp src/rendering/actors/Light.h
+        src/rendering/actors/AbstractCamera.cpp src/rendering/actors/AbstractCamera.h
 )
 
 add_library(lib ${SOURCE_FILES})
