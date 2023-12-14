@@ -5,7 +5,9 @@
 #ifndef INC_3D_ENGINE_ABSTRACTCAMERA_H
 #define INC_3D_ENGINE_ABSTRACTCAMERA_H
 
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+#include "glad/glad.h"
 #include <glm/vec3.hpp>
 #include <glm/detail/type_mat4x4.hpp>
 

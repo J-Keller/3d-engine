@@ -6,7 +6,7 @@
 #define INC_3D_ENGINE_MESH_H
 
 #include <vector>
-#include <glad/glad.h>
+#include "shader/Shader.h"
 #include "surface/Material.h"
 
 class Mesh {
