@@ -44,6 +44,10 @@ set(SOURCE_FILES
         src/rendering/actors/Camera.cpp src/rendering/actors/Camera.h
         src/rendering/actors/Light.cpp src/rendering/actors/Light.h
         src/rendering/actors/AbstractCamera.cpp src/rendering/actors/AbstractCamera.h
+        src/gameplay/MainLoop.cpp src/gameplay/MainLoop.h
+        src/gameplay/Game.cpp
+        src/gameplay/Game.h
+        src/util/GladProvider.h
 )
 
 add_library(lib ${SOURCE_FILES})

@@ -4,7 +4,6 @@
 
 #include <glm/ext/matrix_clip_space.hpp>
 #include "Camera.h"
-#include "../Window.h"
 
 void Camera::setCamera(AbstractCamera *cam) {
   this->camera = cam;

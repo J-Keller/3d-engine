@@ -8,6 +8,7 @@
 #include "AbstractCamera.h"
 #include "../scene/Entity.h"
 #include "../shader/Shader.h"
+#include "../Window.h"
 
 class Camera : public Entity {
  public:
