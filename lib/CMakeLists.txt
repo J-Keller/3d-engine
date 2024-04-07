@@ -45,6 +45,7 @@ set(SOURCE_FILES
         src/rendering/actors/AbstractCamera.cpp src/rendering/actors/AbstractCamera.h
         src/gameplay/MainLoop.cpp src/gameplay/MainLoop.h
         src/gameplay/Game.cpp src/gameplay/Game.h
+        src/audio/audio.c src/audio/audio.h
 )
 
 add_library(lib ${SOURCE_FILES})
