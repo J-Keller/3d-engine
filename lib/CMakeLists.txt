@@ -8,7 +8,21 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-link_directories(usr/lib/x86_64-linux-gnu)
+FetchContent_Declare(
+        glm
+        GIT_REPOSITORY	https://github.com/g-truc/glm.git
+        GIT_TAG 	bf71a834948186f4097caa076cd2663c69a10e1e #refs/tags/1.0.1
+)
+
+FetchContent_MakeAvailable(glm)
+
+link_directories(usr/lib/x86_64-linux-gnu /usr/local/include /opt/homebrew/include)
+include_directories(/usr/local/include /opt/homebrew/include)
+
+find_package(GLFW3 REQUIRED PATHS /opt/homebrew/lib)
+
+add_library(glad STATIC src/include/glad.c)
+target_include_directories(glad PUBLIC /usr/local/include)
 
 set(SOURCE_FILES
         src/include/glad.c
@@ -50,7 +64,7 @@ set(SOURCE_FILES
 
 add_library(lib ${SOURCE_FILES})
 
-target_link_libraries(lib glfw dl gtest_main)
+target_link_libraries(lib glfw dl glm glad gtest_main)
 
 enable_testing()
 

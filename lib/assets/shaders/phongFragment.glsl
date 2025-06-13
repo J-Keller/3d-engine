@@ -109,7 +109,7 @@ vec4 calcSpotLight(SpotLight sLight, vec3 normal) {
 void main() {
     vec4 totalLight = vec4(ambientLight, 1.0);
     vec4 color = vec4(baseColor, 1.0);
-    vec4 textureColor = texture2D(sampler, texCoord0.xy);
+    vec4 textureColor = texture(sampler, texCoord0.xy);
 
     if(textureColor != vec4(0.0, 0.0, 0.0, 1.0)) color *= textureColor;
 

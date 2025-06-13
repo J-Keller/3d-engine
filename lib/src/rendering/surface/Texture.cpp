@@ -16,8 +16,10 @@ Texture::Texture(const char *imagePath) {
     this->height = h;
     this->nrChannels = nrCh;
 
-    this->data = (unsigned char *) malloc(sizeof(unsigned char) * (strlen((char *) tex_data) + 1));
-    strcpy((char *) this->data, (char *) tex_data);
+    size_t imgSize = w * h * nrCh;
+
+    this->data = (unsigned char *) malloc(imgSize);
+    memcpy(this->data, tex_data, imgSize);
   } else {
     std::cout << "Failed to load texture" << std::endl;
   }

@@ -76,85 +76,87 @@ std::pair<std::vector<Mesh>, std::vector<BoxCollider>> DungeonGenerator::generat
         case UP_STAIRS:
         case DOWN_STAIRS:
           floorVertices.insert(floorVertices.end(), {
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top left
-              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // bottom right
-              1.0f * (fx + 1), 0.0f, 1.0f * fy, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, // top right
+              // position                             // tex            // normal
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, 1.0f, 0.0f, // top left
+              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, 1.0f, 0.0f, // bottom right
+              1.0f * (fx + 1), 0.0f, 1.0f * fy,       1.0f, 0.0f,   0.0f, 1.0f, 0.0f, // top right
 
-              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // bottom right
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top left
-              1.0f * fx, 0.0f, 1.0f * (fy + 1), 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, // bottom left
+              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, 1.0f, 0.0f, // bottom right
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, 1.0f, 0.0f, // top left
+              1.0f * fx, 0.0f, 1.0f * (fy + 1),       0.0f, 1.0f,   0.0f, 1.0f, 0.0f, // bottom left
           });
           break;
         case WALL:
           //top
           wallVertices.insert(wallVertices.end(), {
-              1.0f * fx, 1.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top left
-              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // bottom right
-              1.0f * (fx + 1), 1.0f, 1.0f * fy, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, // top right
+              1.0f * fx, 1.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, 1.0f, 0.0f, // top left
+              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, 1.0f, 0.0f, // bottom right
+              1.0f * (fx + 1), 1.0f, 1.0f * fy,       1.0f, 0.0f,   0.0f, 1.0f, 0.0f, // top right
 
-              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, // bottom right
-              1.0f * fx, 1.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f, // top left
-              1.0f * fx, 1.0f, 1.0f * (fy + 1), 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, // bottom left
+              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, 1.0f, 0.0f, // bottom right
+              1.0f * fx, 1.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, 1.0f, 0.0f, // top left
+              1.0f * fx, 1.0f, 1.0f * (fy + 1),       0.0f, 1.0f,   0.0f, 1.0f, 0.0f, // bottom left
           });
 
           // bottom
           wallVertices.insert(wallVertices.end(), {
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, // top left
-              1.0f * (fx + 1), 0.0f, 1.0f * fy, 1.0f, 1.0f, 0.0f, -1.0f, 0.0f, // top right
-              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, -1.0f, 0.0f, // bottom right
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, -1.0f, 0.0f, // top left
+              1.0f * (fx + 1), 0.0f, 1.0f * fy,       1.0f, 0.0f,   0.0f, -1.0f, 0.0f, // top right
+              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, -1.0f, 0.0f, // bottom right
 
-              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, -1.0f, 0.0f, // bottom right
-              1.0f * fx, 0.0f, 1.0f * (fy + 1), 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, // bottom left
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, -1.0f, 0.0f, // top left
+              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, -1.0f, 0.0f, // bottom right
+              1.0f * fx, 0.0f, 1.0f * (fy + 1),       0.0f, 1.0f,   0.0f, -1.0f, 0.0f, // bottom left
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, -1.0f, 0.0f, // top left
           });
 
           // left
           wallVertices.insert(wallVertices.end(), {
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, -1.0f, 0.0f, 0.0f, // top left
-              1.0f * fx, 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, // bottom right
-              1.0f * fx, 1.0f, 1.0f * fy, 1.0f, 1.0f, -1.0f, 0.0f, 0.0f, // top right
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   -1.0f, 0.0f, 0.0f, // top left
+              1.0f * fx, 1.0f, 1.0f * (fy + 1),       1.0f, 1.0f,   -1.0f, 0.0f, 0.0f, // bottom right
+              1.0f * fx, 1.0f, 1.0f * fy,             1.0f, 0.0f,   -1.0f, 0.0f, 0.0f, // top right
 
-              1.0f * fx, 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, // bottom right
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, -1.0f, 0.0f, 0.0f, // top left
-              1.0f * fx, 0.0f, 1.0f * (fy + 1), 0.0f, 0.0f, -1.0f, 0.0f, 0.0f, // bottom left
+              1.0f * fx, 1.0f, 1.0f * (fy + 1),       1.0f, 1.0f,   -1.0f, 0.0f, 0.0f, // bottom right
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   -1.0f, 0.0f, 0.0f, // top left
+              1.0f * fx, 0.0f, 1.0f * (fy + 1),       0.0f, 1.0f,   -1.0f, 0.0f, 0.0f, // bottom left
           });
 
           //right
           wallVertices.insert(wallVertices.end(), {
-              1.0f * (fx + 1), 0.0f, 1.0f * fy, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, // top left
-              1.0f * (fx + 1), 1.0f, 1.0f * fy, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, // top right
-              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, // bottom right
+              1.0f * (fx + 1), 0.0f, 1.0f * fy,       0.0f, 0.0f,   1.0f, 0.0f, 0.0f, // top left
+              1.0f * (fx + 1), 1.0f, 1.0f * fy,       1.0f, 0.0f,   1.0f, 0.0f, 0.0f, // top right
+              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   1.0f, 0.0f, 0.0f, // bottom right
 
-              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 1.0f, 0.0f, 0.0f, // bottom right
-              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, // bottom left
-              1.0f * (fx + 1), 0.0f, 1.0f * fy, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, // top left
+              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   1.0f, 0.0f, 0.0f, // bottom right
+              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 0.0f, 1.0f,   1.0f, 0.0f, 0.0f, // bottom left
+              1.0f * (fx + 1), 0.0f, 1.0f * fy,       0.0f, 0.0f,   1.0f, 0.0f, 0.0f, // top left
           });
 
           //back
           wallVertices.insert(wallVertices.end(), {
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, 0.0f, -1.0f, // top left
-              1.0f * (fx + 1), 1.0f, 1.0f * fy, 0.0f, 1.0f, 0.0f, 0.0f, -1.0f, // bottom right
-              1.0f * (fx + 1), 0.0f, 1.0f * fy, 1.0f, 1.0f, 0.0f, 0.0f, -1.0f, // top right
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, 0.0f, -1.0f, // top left
+              1.0f * (fx + 1), 1.0f, 1.0f * fy,       1.0f, 1.0f,   0.0f, 0.0f, -1.0f, // bottom right
+              1.0f * (fx + 1), 0.0f, 1.0f * fy,       1.0f, 0.0f,   0.0f, 0.0f, -1.0f, // top right
 
-              1.0f * (fx + 1), 1.0f, 1.0f * fy, 0.0f, 1.0f, 0.0f, 0.0f, -1.0f, // bottom right
-              1.0f * fx, 0.0f, 1.0f * fy, 1.0f, 0.0f, 0.0f, 0.0f, -1.0f, // top left
-              1.0f * fx, 1.0f, 1.0f * fy, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, // bottom left
+              1.0f * (fx + 1), 1.0f, 1.0f * fy,       1.0f, 1.0f,   0.0f, 0.0f, -1.0f, // bottom right
+              1.0f * fx, 0.0f, 1.0f * fy,             0.0f, 0.0f,   0.0f, 0.0f, -1.0f, // top left
+              1.0f * fx, 1.0f, 1.0f * fy,             0.0f, 1.0f,   0.0f, 0.0f, -1.0f, // bottom left
           });
 
           // front
           wallVertices.insert(wallVertices.end(), {
-              1.0f * fx, 0.0f, 1.0f * (fy + 1), 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, // top left
-              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, // top right
-              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, // bottom right
+              1.0f * fx, 0.0f, 1.0f * (fy + 1),       0.0f, 0.0f,   0.0f, 0.0f, 1.0f, // top left
+              1.0f * (fx + 1), 0.0f, 1.0f * (fy + 1), 1.0f, 0.0f,   0.0f, 0.0f, 1.0f, // top right
+              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, 0.0f, 1.0f, // bottom right
 
-              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, // bottom right
-              1.0f * fx, 1.0f, 1.0f * (fy + 1), 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, // bottom left
-              1.0f * fx, 0.0f, 1.0f * (fy + 1), 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, // top left
+              1.0f * (fx + 1), 1.0f, 1.0f * (fy + 1), 1.0f, 1.0f,   0.0f, 0.0f, 1.0f, // bottom right
+              1.0f * fx, 1.0f, 1.0f * (fy + 1),       0.0f, 1.0f,   0.0f, 0.0f, 1.0f, // bottom left
+              1.0f * fx, 0.0f, 1.0f * (fy + 1),       0.0f, 0.0f,   0.0f, 0.0f, 1.0f, // top left
           });
 
           colliders.emplace_back(glm::vec3(fx, 0, fy), glm::vec3(fx + 1, 1, fy + 1));
           break;
-        default:continue;
+        default:
+          continue;
       }
 
     }

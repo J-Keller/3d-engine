@@ -3,7 +3,7 @@
 //
 
 #include "../../lib/src/gameplay/MainLoop.h"
-#include "Wolfenstein3DClone.h"
+#include "fpsgame/Wolfenstein3DClone.h"
 #include "Input.h"
 
 extern "C" {
